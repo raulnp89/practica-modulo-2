@@ -1,0 +1,530 @@
+*:where(
+    :not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)
+  ) {
+  all: unset;
+  display: revert;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(26, 29, 36);
+}
+h1 {
+  font-family: "Scream Real", sans-serif;
+}
+li {
+  list-style-type: none;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+.layout-box {
+  max-width: 1160px;
+  margin-inline: auto;
+}
+@font-face {
+  font-family: "Scream Real";
+  src: url(fuentes/Scream\ Real.ttf);
+}
+@font-face {
+  font-family: "Scream Real2";
+  src: url(fuentes/Scream\ Real.otf);
+}
+.background-white {
+  background-color: white;
+}
+.background-filmax {
+  background-color: rgb(26, 29, 36);
+}
+.background-black {
+  background-color: black;
+}
+.background-red {
+  background-color: red;
+}
+.background-blue {
+  background-color: cadetblue;
+}
+.background-lima {
+  background-color: chartreuse;
+}
+.separator {
+  color: #a8a8a8;
+}
+.botones-laterales .boton-lateral1 {
+  width: 60px;
+  height: 60px;
+  border: 1px solid #e0041d;
+  background-color: #e0041d;
+  display: flex;
+  left: 100%;
+  margin-bottom: 5px;
+}
+.botones-laterales .boton-lateral2 {
+  width: 60px;
+  height: 60px;
+  border: 1px solid #e0041d;
+  background-color: #e0041d;
+  display: flex;
+  position: sticky;
+  left: 100%;
+  margin-bottom: 5px;
+}
+.botones-laterales .boton-lateral3 {
+  width: 60px;
+  height: 60px;
+  border: 1px solid #e0041d;
+  background-color: #e0041d;
+  display: flex;
+  position: sticky;
+  left: 100%;
+}
+.boton-lateral1,
+.boton-lateral2,
+.boton-lateral3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: rgb(39, 37, 37);
+}
+.botones-laterales {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+}
+.boton-to-top {
+  position: fixed;
+  bottom: 35px;
+  right: 20px;
+  background-color: chocolate;
+  padding: 10px;
+  cursor: pointer;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  fill: white;
+  z-index: 100;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  padding-top: 50px;
+  margin-block: 20px;
+  position: sticky;
+  top: 0;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  z-index: 10;
+  background-color: rgb(26, 29, 36);
+}
+.logo-header {
+  display: flex;
+  justify-content: center;
+  object-fit: cover;
+}
+.links-header {
+  font-size: 5;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.links-header a {
+  padding-bottom: 10px;
+}
+.links-header a:hover {
+  cursor: pointer;
+  border-bottom: 1px solid red;
+}
+.search-header {
+  display: flex;
+  gap: 100px;
+}
+.social-header {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  flex-grow: 1;
+  cursor: pointer;
+  gap: 10px;
+  fill: white;
+}
+.fb-header:hover {
+  fill: blue;
+}
+.yt-header:hover {
+  fill: red;
+}
+.ig-header:hover {
+  fill: deeppink;
+}
+.tw-header:hover {
+  fill: lightskyblue;
+}
+.header .tool-header {
+  display: flex;
+  gap: 30px;
+}
+.portada {
+  padding-top: 100px;
+}
+.titulo-portada {
+  margin-bottom: 30px;
+}
+.portada h1 {
+  font-size: 48px;
+  color: red;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 7px;
+}
+.portada time {
+  color: white;
+  letter-spacing: 3px;
+  font-size: 30px;
+  font-weight: bold;
+}
+.portada img {
+  max-width: 1160px;
+}
+.menu-portada {
+  padding-block: 40px;
+  transition: 0.5s;
+}
+.menu-portada ul {
+  display: flex;
+  justify-content: space-evenly;
+}
+.menu-portada li {
+  margin-top: 5px;
+}
+.ficha-portada,
+.videos-portada,
+.reparto-portada,
+.noticias-portada,
+.criticas-portada,
+.fotos-portada,
+.carteles-portada {
+  color: white;
+  fill: white;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ficha-portada:hover {
+  transform: translateY(-10px);
+  color: red;
+  fill: red;
+}
+.videos-portada:hover {
+  transform: translateY(-10px);
+  color: red;
+  fill: red;
+}
+.fotos-portada:hover {
+  transform: translateY(-10px);
+  color: red;
+  fill: red;
+}
+.reparto-portada:hover {
+  transform: translateY(-10px);
+  color: red;
+  fill: red;
+}
+.noticias-portada:hover {
+  transform: translateY(-10px);
+  color: red;
+  fill: red;
+}
+.criticas-portada:hover {
+  transform: translateY(-10px);
+  color: red;
+  fill: red;
+}
+.carteles-portada:hover {
+  transform: translateY(-10px);
+  color: red;
+  fill: red;
+}
+.info-cartel {
+  padding-top: 40px;
+  padding-bottom: 100px;
+  display: flex;
+}
+.info-pelicula {
+  margin-left: 30px;
+}
+.info-pelicula h2 {
+  text-transform: uppercase;
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.info-pelicula h3 {
+  margin-bottom: 20px;
+}
+.info-pelicula li {
+  margin-top: 10px;
+}
+.info-pelicula a {
+  cursor: pointer;
+  font-weight: bold;
+}
+.info-pelicula a:hover {
+  color: red;
+}
+.info-pelicula svg {
+  vertical-align: bottom;
+}
+.info-pelicula .sinopsis {
+  margin-top: 30px;
+  text-align: justify;
+}
+.puntuacion {
+  margin-top: 40px;
+  display: flex;
+  gap: 100px;
+}
+.all-ratings {
+  display: flex;
+  gap: 100px;
+}
+.rating,
+.rating2 {
+  display: grid;
+  font-size: 25px;
+  grid-template-columns: 70px auto;
+  grid-template-rows: 31px 31px;
+  letter-spacing: 1px;
+}
+.rates {
+  color: #fdd835;
+  cursor: pointer;
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  vertical-align: bottom;
+}
+.rate-numero {
+  grid-row: 1;
+  grid-column: 2;
+}
+.rating2 .rate-numero {
+  color: red;
+  font-weight: bold;
+}
+.rate-votos {
+  grid-row: 2;
+  grid-column: 2;
+}
+.nota-ppal {
+  font-weight: bold;
+  color: cornflowerblue;
+  margin-right: 5px;
+}
+.trailer {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.trailer .trailer-txt {
+  color: white;
+  margin-bottom: 50px;
+  font-family: "Scream Real";
+  font-size: 30px;
+  letter-spacing: 2px;
+}
+
+.all-img {
+  padding-block: 100px;
+  text-align: center;
+  font-family: "Scream Real";
+  text-transform: uppercase;
+  font-size: 30px;
+  letter-spacing: 2px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+.lista-img {
+  display: grid;
+  margin-top: 20px;
+  grid-template-columns: 1fr 0.5fr 1fr;
+  grid-template-rows: 400px 400px;
+  gap: 20px;
+}
+.lista-img img {
+  object-fit: cover;
+}
+.titulo-reparto {
+  padding-top: 50px;
+  text-align: center;
+  font-size: 30px;
+  text-transform: uppercase;
+  /* font-weight: bold; */
+  font-family: "Scream Real";
+  letter-spacing: 2px;
+}
+.reparto {
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 100px;
+}
+.actores {
+  padding-top: 50px;
+  padding-bottom: 20px;
+  display: flex;
+  gap: 40px;
+  white-space: nowrap;
+  overflow-x: auto;
+  cursor: grab;
+}
+.img-reparto {
+  width: 150px;
+  flex-shrink: 0;
+  text-align: center;
+  padding: 10px;
+}
+.img-reparto img {
+  border-radius: 50%;
+  object-fit: cover;
+  max-width: 100%;
+}
+.img-reparto p {
+  text-transform: uppercase;
+  font-size: 14px;
+  color: black;
+  margin-top: 10px;
+  font-weight: bold;
+}
+.img-reparto cite {
+  color: #a8a8a8;
+  font-size: 12px;
+}
+.last-news {
+  padding-block: 100px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.last-news h3 {
+  color: white;
+  text-transform: uppercase;
+  font-family: "Scream Real";
+  letter-spacing: 2px;
+  font-size: 30px;
+}
+.lista-last-news {
+  display: grid;
+  grid-template-columns: 0.5fr 0.5fr;
+  grid-template-rows: 0.5fr;
+  gap: 20px;
+  margin-block: 50px;
+  color: white;
+}
+.lista-last-news img {
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.lista-last-news .noticia1 {
+  display: flex;
+  justify-content: flex-start;
+}
+.lista-last-news .noticia1-txt {
+  margin-left: 15px;
+  text-align: start;
+}
+.lista-last-news .noticia1-txt h4 {
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.lista-last-news .noticia1-txt h4:hover {
+  color: red;
+  font-weight: bold;
+}
+
+.footer {
+  margin-top: 150px;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 200px;
+}
+.copyright p {
+  margin-top: 30px;
+  font-size: 14px;
+  color: #a8a8a8;
+}
+.copyright a:hover {
+  cursor: pointer;
+  color: white;
+}
+.columnas-footer .movies-footer,
+.newsletter-footer h3 {
+  font-size: 17px;
+  color: white;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.movies-footer::after {
+  display: inline-block;
+  content: "";
+  height: 1px;
+  width: 28px;
+  background: red;
+  vertical-align: middle;
+  margin-left: 15px;
+}
+.columnas-footer .lista-footer {
+  font-size: 14px;
+  color: #a8a8a8;
+  margin-top: 20px;
+}
+.columnas-footer .lista-footer li {
+  margin-bottom: 15px;
+}
+.columnas-footer .lista-footer li:hover {
+  color: white;
+  cursor: pointer;
+}
+.newsletter-footer a {
+  text-transform: uppercase;
+  font-size: 11px;
+  color: #a8a8a8;
+  letter-spacing: 2px;
+}
+.newsletter-footer button {
+  color: white;
+  margin-left: 95px;
+  font-size: 20px;
+}
+.newsletter-footer button:hover {
+  color: red;
+  cursor: pointer;
+}
+.social-footer {
+  display: flex;
+  padding-top: 70px;
+  gap: 10px;
+  position: relative;
+}
+.social-footer li {
+  cursor: pointer;
+}
+.social-footer::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #a8a8a8;
+  top: 20%;
+}
